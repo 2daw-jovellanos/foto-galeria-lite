@@ -18,6 +18,7 @@ class GaleriaController extends Controller {
     }
 
     function recibirFichero() {
+        $error_msg="";
         $name = $_FILES["foto"]["name"];
         $lowername = strtolower($name);
         if (endsWith($lowername, "jpg") || endsWith($lowername, "png") || endsWith($lowername, "gif")) {
