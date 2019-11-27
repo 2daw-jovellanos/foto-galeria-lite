@@ -5,7 +5,7 @@ require_once "funciones.php";
 class GaleriaController extends Controller {
 
     function mostrarFotos($error_msg="") {
-        $filenames = glob("uploads/*.{jpg,gif,png, webp}", GLOB_BRACE);
+        $filenames = glob("uploads/*.{jpg,jpeg,gif,png,webp}", GLOB_BRACE);
         $fotos = [];
         foreach ($filenames as $filename) {
             array_push($fotos, [
