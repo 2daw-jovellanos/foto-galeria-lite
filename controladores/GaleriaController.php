@@ -19,7 +19,7 @@ class GaleriaController extends Controller {
 
     function recibirFichero() {
         $error_msg="";
-        $name = strtolower($name);
+        $name = strtolower($_FILES["foto"]["name"]);
         if (endsWith($name, "jpg") || endsWith($name, "png") || endsWith($name, "gif")
         || endsWith($name, "webp")|| endsWith($name, "jpeg")) {
             // copiar fichero
